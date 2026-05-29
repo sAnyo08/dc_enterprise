@@ -2,20 +2,63 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
     </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 0 24px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 70vh;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            model-viewer {
+                height: 60vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Model 1</h2>
-    <model-viewer src="viva_school.glb" camera-controls min-camera-orbit="auto auto 0.1m"
-        max-camera-orbit="auto auto 100m" field-of-view="45deg" style="width:100%;height:100vh;">
-    </model-viewer>
 
-    <h2>Model 2</h2>
-    <model-viewer src="withoutslide.glb" camera-controls min-camera-orbit="auto auto 0.1m"
-        max-camera-orbit="auto auto 100m" field-of-view="45deg" style="width:100%;height:100vh;">
-    </model-viewer>
+    <div class="container">
+
+        <h2>Model 1</h2>
+
+        <model-viewer src="viva_school.glb" camera-controls min-camera-orbit="auto auto 0.1m"
+            max-camera-orbit="auto auto 100m" field-of-view="45deg">
+        </model-viewer>
+
+        <h2>Model 2</h2>
+
+        <model-viewer src="withoutslide.glb" camera-controls min-camera-orbit="auto auto 0.1m"
+            max-camera-orbit="auto auto 100m" field-of-view="45deg">
+        </model-viewer>
+
+    </div>
+
 </body>
 
 </html>
