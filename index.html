@@ -8,6 +8,10 @@
     </script>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -29,6 +33,24 @@
             margin-bottom: 30px;
         }
 
+        .scroll-btn {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #0078ff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .scroll-btn:hover {
+            opacity: 0.9;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 0 20px;
@@ -45,14 +67,18 @@
 
     <div class="container">
 
+        <a href="#model2" class="scroll-btn">
+            View Model 2 ↓
+        </a>
+
         <h2>Model 1</h2>
 
         <model-viewer src="viva_school.glb" camera-controls min-camera-orbit="auto auto 0.1m"
             max-camera-orbit="auto auto 100m" field-of-view="45deg">
         </model-viewer>
-
-        <h2>Model 2</h2>
-
+        <p></p>
+        <h2 id="model2">Model 2</h2>
+        <p></p>
         <model-viewer src="withoutslide.glb" camera-controls min-camera-orbit="auto auto 0.1m"
             max-camera-orbit="auto auto 100m" field-of-view="45deg">
         </model-viewer>
